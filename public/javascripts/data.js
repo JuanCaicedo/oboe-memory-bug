@@ -1,5 +1,5 @@
 oboe('https://raw.githubusercontent.com/zemirco/sf-city-lots-json/master/citylots.json')
-  .node('!.features[*]', function(feature) {
+  .on('node:!.features[*]',function(feature) {
 
     var count = document.querySelector('.count');
     count.textContent = Number(count.textContent) + 1;
